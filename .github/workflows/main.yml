@@ -59,10 +59,10 @@ jobs:
           path: coverage/
 
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5
+        uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_HOST_URL: https://fuzzy-waffle-rrqxpvqpgr62pxw7-9000.app.github.dev
         with:
           args: >
             -Dsonar.projectKey=asfasdfasfa
@@ -81,7 +81,7 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_HOST_URL: https://fuzzy-waffle-rrqxpvqpgr62pxw7-9000.app.github.dev
 
   # ── Step 3: Deploy (only on push to main/master) ──────────────
   deploy:
