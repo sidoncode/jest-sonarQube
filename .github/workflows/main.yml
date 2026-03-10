@@ -22,6 +22,7 @@ jobs:
           node-version: '20'
 
       - run: npm install
+      - run: npm install --save-dev ts-node
 
       - name: Run tests with coverage
         run: npm run test:coverage -- --ci --forceExit
