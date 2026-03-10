@@ -24,6 +24,9 @@ jobs:
       - run: npm install
       - run: npm install --save-dev ts-node
 
+      - name: Update snapshots
+        run: npx jest --updateSnapshot --forceExit
+
       - name: Run tests with coverage
         run: npm run test:coverage -- --ci --forceExit
 
